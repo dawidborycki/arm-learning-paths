@@ -1836,16 +1836,16 @@
 - a_date: '2024-03-18'
   content:
     cross-platform: 15
-    embedded-systems: 15
+    embedded-systems: 16
     install-guides: 77
     laptops-and-desktops: 20
     microcontrollers: 24
     servers-and-cloud-computing: 64
     smartphones-and-mobile: 12
-    total: 227
+    total: 228
   contributions:
     external: 23
-    internal: 224
+    internal: 225
   github_engagement:
     num_forks: 30
     num_prs: 8
@@ -1862,7 +1862,7 @@
     elham-harirpoush: 2
     florent-lebeau: 5
     "fr\xE9d\xE9ric--lefred--descamps": 2
-    gabriel-peterson: 4
+    gabriel-peterson: 5
     jason-andrews: 78
     jonathan-davies: 2
     jose-emilio-munoz-lopez,-arm: 1
