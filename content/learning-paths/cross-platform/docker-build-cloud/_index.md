@@ -1,8 +1,6 @@
 ---
 title: Build multi-architecture container images with Docker Build Cloud
 
-draft: false 
-
 minutes_to_complete: 30
 
 who_is_this_for: This is an introductory topic for software developers who want to learn how to use Docker Build Cloud.
@@ -14,6 +12,7 @@ learning_objectives:
 prerequisites:
     - A computer with Docker installed. This can be Windows, macOS, or Linux. Any architecture can be used. 
     - A GitHub account
+    - A Docker Hub account
 
 author_primary: Jason Andrews
 

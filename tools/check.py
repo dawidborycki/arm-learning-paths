@@ -1,6 +1,5 @@
 #/usr/bin/env python3
 
-import argparse
 import logging
 import os
 import subprocess
@@ -35,8 +34,8 @@ def patch(article, results, lk):
     arr = []
     
     # Check if this is a learning path
-    if isinstance(results, list):
-        for res in data['test_images']:
+    if isinstance(results, list) and data.get("test_images"):
+        for res in data["test_images"]:
             failed = False
             for el in (results):
                 if el[res] != 0:
@@ -48,8 +47,8 @@ def patch(article, results, lk):
             if not failed:
                 logging.debug("Status on {}: passed".format(res))
                 arr.append("passed")
-    else:
-        for res in data['test_images']:
+    elif data.get("test_images"):
+        for res in data["test_images"]:
             if results[res] != 0:
                 logging.debug("Status on {}: FAILED".format(res))
                 arr.append("failed")
@@ -83,7 +82,7 @@ def check(json_file, start, stop):
         data = json.load(jf)
 
     # Start instances for all images
-    if start:
+    if start and data.get("image"):
         for i, img in enumerate(data["image"]):
             # Launch
             logging.info("Container instance test_{} is {}".format(i, img))
@@ -140,15 +139,14 @@ def check(json_file, start, stop):
     else:
         logging.debug("Skip container(s) launch")
 
-    # Create 1 test suite for each image
-    test_cases= []
-    for img in data["image"]:
-        test_cases.append([])
-
-    # Create array to store test result
-    results = {}
-    for img in data["image"]:
-        results[img] = 0
+    if data.get("image"):
+        # Create 1 test suite for each image
+        test_cases= [[] for img in data["image"]]
+        # Create array to store test result
+        results = {img:0 for img in data["image"]}
+    else:
+        test_cases = []
+        results = {}
 
     # Check if there are tests
     if not "ntests" in data.keys():
@@ -157,6 +155,8 @@ def check(json_file, start, stop):
     # Run bash commands
     print(data["ntests"])
     for i in range(0, data["ntests"]):
+        if not data.get("{}".format(i)):
+            continue
         print(i)
         t = data["{}".format(i)]
         print(t)
@@ -194,14 +194,15 @@ def check(json_file, start, stop):
             c = "cd " + t["cwd"]
             logging.debug("Copying command to file {}: {}".format(fn, c))
             f.write("{}\n".format(c))
-        for j in range(0, t["ncmd"]):
-            if "expected" in t.keys():
-                # Do not run output commands
-                if j == int(t["expected"])-1:
-                    break
-            c = t["{}".format(j)]
-            logging.debug("Copying command to file {}: {}".format(fn, c))
-            f.write("{}\n".format(c))
+        if t.get("ncmd"):
+            for j in range(0, t["ncmd"]):
+                if "expected" in t.keys():
+                    # Do not run output commands
+                    if j == (int(eval(t["expected"]))-1):
+                        break
+                c = t["{}".format(j)]
+                logging.debug("Copying command to file {}: {}".format(fn, c))
+                f.write("{}\n".format(c))
         f.close()
 
         # Check if a target is specified
@@ -247,14 +248,16 @@ def check(json_file, start, stop):
                 if p.returncode == ret_code:
                     # check with expected result if any
                     if "expected" in t.keys():
-                        exp = t["{}".format(int(t["expected"])-1)]
-                        # strip out '\n' and decode byte to string
-                        if exp == p.stdout.rstrip().decode("utf-8"):
-                            msg = "Test passed"
-                        else:
-                            msg = "ERROR (unexpected output. Expected {} but got {})".format(exp, p.stdout.rstrip().decode("utf-8"))
-                            test_cases[k][-1].add_failure_info(msg)
-                            results[data["image"][k]] = results[data["image"][k]]+1
+                        t_expected = t.get("{}".format(int(eval(t["expected"]))-1))
+                        if t_expected:
+                            exp = t[t_expected]
+                            # strip out '\n' and decode byte to string
+                            if exp == p.stdout.rstrip().decode("utf-8"):
+                                msg = "Test passed"
+                            else:
+                                msg = "ERROR (unexpected output. Expected {} but got {})".format(exp, p.stdout.rstrip().decode("utf-8"))
+                                test_cases[k][-1].add_failure_info(msg)
+                                results[data["image"][k]] = results[data["image"][k]]+1
                     else:
                         msg = "Test passed"
                 else:
