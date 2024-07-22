@@ -78,11 +78,7 @@ sw_categories:
       readable_title: Terraform
       tests_and_status:
       - ubuntu:latest: passed
-  laptops-and-desktops:
-    memory-tagged-dynamic-memory-allocator:
-      readable_title: Adding Memory Tagging to a Dynamic Memory Allocator
-      tests_and_status:
-      - ubuntu:latest: passed
+  laptops-and-desktops: {}
   microcontrollers:
     tfm:
       readable_title: Get started with Trusted Firmware-M
