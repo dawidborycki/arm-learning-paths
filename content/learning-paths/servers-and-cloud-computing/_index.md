@@ -7,11 +7,11 @@ key_ip:
 - Neoverse
 maintopic: true
 operatingsystems_filter:
-- Android: 1
+- Android: 2
 - Baremetal: 1
-- Linux: 86
-- macOS: 2
-- Windows: 5
+- Linux: 95
+- macOS: 4
+- Windows: 7
 pinned_modules:
 - module:
     name: Recommended getting started learning paths
@@ -20,13 +20,13 @@ pinned_modules:
     - migration
 subjects_filter:
 - CI-CD: 2
-- Containers and Virtualization: 22
+- Containers and Virtualization: 23
 - Databases: 15
-- Libraries: 5
-- ML: 7
-- Performance and Architecture: 30
+- Libraries: 6
+- ML: 8
+- Performance and Architecture: 35
 - Storage: 1
-- Web: 7
+- Web: 9
 subtitle: Optimize cloud native apps on Arm for performance and cost
 title: Servers and Cloud Computing
 tools_software_languages_filter:
@@ -44,39 +44,46 @@ tools_software_languages_filter:
 - AWS Elastic Kubernetes Service (EKS): 2
 - Bastion: 3
 - BOLT: 1
-- C: 3
+- bpftool: 1
+- C: 4
 - C#: 1
-- C++: 1
+- C++: 3
+- C/C++: 2
+- Capstone: 1
 - CCA: 2
 - Clair: 1
-- Clang: 8
+- Clang: 9
 - ClickBench: 1
 - ClickHouse: 1
 - CMake: 1
-- Coding: 14
+- Coding: 16
 - Django: 1
-- Docker: 13
+- Docker: 14
 - Envoy: 2
 - Flink: 1
 - Fortran: 1
 - FVP: 3
-- GCC: 16
+- GCC: 17
 - gdb: 1
 - Geekbench: 1
-- GenAI: 1
+- GenAI: 2
 - GitHub: 1
+- GitLab: 1
 - Glibc: 1
 - Go: 2
+- Google Axion: 1
 - GoogleTest: 1
 - HammerDB: 1
 - InnoDB: 1
 - Intrinsics: 1
 - JAVA: 1
+- Java: 1
 - JAX: 1
 - Kafka: 1
 - Keras: 1
-- Kubernetes: 6
+- Kubernetes: 7
 - Lambda: 1
+- libbpf: 1
 - Linaro Forge: 1
 - LLM: 1
 - LSE: 1
@@ -86,16 +93,19 @@ tools_software_languages_filter:
 - mpi: 1
 - MySQL: 9
 - Neon: 3
+- NEON: 1
 - Nexmark: 1
 - Nginx: 3
+- Node.js: 2
 - PAPI: 1
 - perf: 3
 - PostgreSQL: 4
-- Python: 7
+- Python: 8
 - PyTorch: 3
 - Redis: 3
 - Remote.It: 2
 - RME: 2
+- Rust: 1
 - snappy: 1
 - Snort: 1
 - SQL: 7
@@ -111,14 +121,15 @@ tools_software_languages_filter:
 - Trusted Firmware: 1
 - TypeScript: 1
 - Vectorscan: 1
+- Visual Studio Code: 2
 - WordPress: 3
 - x265: 1
 - zlib: 1
 - Zookeeper: 1
 weight: 1
 cloud_service_providers_filter:
-- AWS: 9
-- Google Cloud: 3
+- AWS: 11
+- Google Cloud: 8
 - Microsoft Azure: 7
 - Oracle: 2
 ---

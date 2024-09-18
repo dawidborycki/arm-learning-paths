@@ -29,6 +29,21 @@ layout: installtoolsall         # DO NOT MODIFY. Always true for tool install ar
 
 The Streamline CLI tools are native command-line tools that are designed to run directly on an Arm server running Linux. The tools provide a software profiling methodology that gives you clear and actionable performance data. You can use this data to guide the optimization of the heavily used functions in your software.
 
+## Platform support
+
+Streamline CLI tools are supported with the following host operating systems running on an Arm AArch64 host machine:
+
+* Amazon Linux 2023 or newer
+* Debian 10 or newer
+* RHEL 8 or newer
+* Ubuntu 20.04 or newer
+
+Streamline CLI tools are supported on the following Arm CPUs:
+
+* Arm Neoverse N1
+* Arm Neoverse N2
+* Arm Neoverse V1
+
 ## Before you begin
 
 Use the Arm Sysreport utility to determine whether your system configuration supports hardware-assisted profiling. Follow the instructions in [Get ready for performance analysis with Sysreport][1] to discover how to download and run this utility.
@@ -47,7 +62,9 @@ accurate.
 
 ## Building your application
 
-Your application should be a release build, but needs to include symbol information. Build your application with the `-g` option to include symbol information. Arm recommends that you disable link-time-optimization to make the profile easier to understand.
+Before you can capture a software profile you must build your application with debug information. This enables the profiler to map instruction addresses back to specific functions in your source code. For C and C++ you do this by passing the `-g` option to the compiler.
+
+Arm recommends that you profile an optimized release build of your application, as this ensures you are profiling a realistic code workload. For C and C++ you do this by passing the `-O2` or `-O3` option to the compiler. However, it is recommended that you disable invasive optimization techniques, such as link-time optimization (LTO), because they heavily restructure the code and make the profile difficult to understand.
 
 If you are using the `workflow_topdown_basic option`, ensure that your application workload is at least 20 seconds long, in order to give the core time to capture all of the metrics needed. This time increases linearly as you add more metrics to capture.
 
@@ -56,8 +73,8 @@ If you are using the `workflow_topdown_basic option`, ensure that your applicati
 1. Download and extract the Streamline CLI tools on your Arm server:
 
     ```sh
-    wget https://artifacts.tools.arm.com/arm-performance-studio/2024.2/Arm_Streamline_CLI_Tools_9.2.0_linux_arm64.tgz 
-    tar -xzf Arm_Streamline_CLI_Tools_9.2.0_linux_arm64.tgz 
+    wget https://artifacts.tools.arm.com/arm-performance-studio/2024.3/Arm_Streamline_CLI_Tools_9.2.2_linux_arm64.tgz 
+    tar -xzf Arm_Streamline_CLI_Tools_9.2.2_linux_arm64.tgz 
     ```
 
 1. The `sl-format.py` Python script requires Python 3.8 or later, and depends on several third-party modules. We recommend creating a Python virtual environment containing these modules to run the tools. For example:
@@ -77,8 +94,7 @@ If you are using the `workflow_topdown_basic option`, ensure that your applicati
 
 ## Applying the kernel patch
 
-For best results, we provide a Linux kernel patch that modifies the behavior of Linux perf to improve support for capturing function-attributed top-down
-metrics on Arm systems. This patch provides two new capabilities:
+For best results, we provide a Linux kernel patch that modifies the behavior of Linux perf to improve support for capturing function-attributed top-down metrics on Arm systems. This patch provides two new capabilities:
 
 * It allows a new thread to inherit the perf counter group configuration of its parent.
 * It decouples the perf event-based sampling window size from the overall sample rate. This allows strobed mark-space sampling patterns where the tool can capture a small window without using a high sample rate.
@@ -117,6 +133,12 @@ patch -p 1 -i v6.7-combined.patch
 
 Follow these steps to integrate these patches into an RPM-based distribution's kernel:
 
+1. Install the RPM build tools:
+
+    ```
+    sudo yum install rpm-build rpmdevtools
+    ```
+    
 1. Remove any existing `rpmbuild` directory, renaming as appropriate:
 
     ```sh
@@ -163,6 +185,12 @@ Follow these steps to integrate these patches into an RPM-based distribution's k
     ```
 
 1. Save the changes and exit the editor.
+
+1. Install the build dependencies:
+
+    ```sh
+    sudo dnf builddep SPECS/kernel.spec
+    ```
 
 1. Build the kernel and other rpms:
 
