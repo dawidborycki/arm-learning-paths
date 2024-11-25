@@ -7,7 +7,7 @@ layout: learningpathall
 ---
 
 ## Before you begin
-The instructions in this Learning Path are for any Arm server running Ubuntu 22.04 LTS. You need an Arm server instance with at least 16 cores and 64GB of RAM to run this example. The instructions have been tested on an AWS Graviton4 r8g.4xlarge instance.
+The instructions in this Learning Path are for any Arm server running Ubuntu 22.04 LTS. You need an Arm server instance with at least 16 cores and 64GB of RAM to run this example. Configure disk storage up to at least 50 GB. The instructions have been tested on an AWS Graviton4 r8g.4xlarge instance.
 
 ## Overview
 Arm CPUs are widely used in traditional ML and AI use cases. In this Learning Path, you learn how to run generative AI inference-based use cases like a LLM chatbot using PyTorch on Arm-based CPUs. PyTorch is a popular deep learning framework for AI applications.
@@ -50,7 +50,7 @@ wget https://raw.githubusercontent.com/ArmDeveloperEcosystem/PyTorch-arm-patches
 wget https://raw.githubusercontent.com/ArmDeveloperEcosystem/PyTorch-arm-patches/main/0001-Feat-Enable-int4-quantized-models-to-work-with-pytor.patch
 git apply 0001-Feat-Enable-int4-quantized-models-to-work-with-pytor.patch
 git apply --whitespace=nowarn 0001-modified-generate.py-for-cli-and-browser.patch
-./install_requirements.sh
+pip install -r requirements.txt
 ```
 {{% notice Note %}} You will need Python version 3.10 to apply these patches. This is the default version of Python installed on an Ubuntu 22.04 Linux machine. {{% /notice %}}
 
@@ -66,7 +66,7 @@ pip uninstall torchao && cd ao/ && rm -rf build && python setup.py install
 ### Login to Hugging Face
 You can now download the LLM.
 
-Log in to the Hugging Face repository and enter your API key from Hugging face:
+[Generate an Access Token](https://huggingface.co/settings/tokens) to authenticate your identity with Hugging Face Hub. A token with read-only access is sufficient. Log in to the Hugging Face repository and enter your Access Token key from Hugging face. 
 
 ```sh
 huggingface-cli login
