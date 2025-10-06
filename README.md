@@ -12,13 +12,17 @@ The Learning Paths created here are maintained by Arm and the Arm software devel
 
 All contributions are welcome as long as they relate to software development for the Arm architecture. 
   * Write a Learning Path (or improve existing content)
-    * Fork this repo and submit pull requests; follow the step by step instructions in [Create a Learning Path](https://learn.arm.com//learning-paths/cross-platform/_example-learning-path/) on the website.
+    * Fork this repo and submit pull requests; follow the step by step instructions in [Create a Learning Path](https://learn.arm.com/learning-paths/cross-platform/_example-learning-path/) on the website.
   * Ideas for a new Learning Path
     * Create a new GitHub idea under the [Discussions](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/discussions) area in this GitHub repo.
   * Log a code issue (or other general issues)
     * Log a [issue on GitHub](https://github.com/ArmDeveloperEcosystem/arm-learning-paths/issues) or from the Learning Path on the left-hand nav bar.
 
 Note that all site content, including new contributions, is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by/4.0/).
+
+## AI Development Tools
+
+When using AI coding assistants (GitHub Copilot, Amazon Q, Gemini, Cursor, etc.), refer to `.github/copilot-instructions.md` for project-specific guidelines including content requirements, writing style standards, and Arm terminology conventions for Learning Paths.
 
 <br/>
 

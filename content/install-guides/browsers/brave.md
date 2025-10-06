@@ -11,7 +11,7 @@ additional_search_terms:
 ### Estimated completion time in minutes (please use integer multiple of 5)
 minutes_to_complete: 10
 
-author_primary: Jason Andrews
+author: Jason Andrews
 
 ### Link to official documentation
 official_docs: https://support.brave.com/hc/en-us/categories/360001053032-Desktop-Browser
@@ -23,13 +23,21 @@ multitool_install_part: true    # Set to true if a sub-page of a multi-page arti
 layout: installtoolsall         # DO NOT MODIFY. Always true for tool install articles
 ---
 
-## Installing Brave
+## How do I install Brave?
 
 The Brave browser runs on Windows on Arm as a native ARM64 application, and is available on Arm Linux distributions. 
 
 ### Linux
 
-To install Brave on Linux:
+There are two options to install Brave on Linux.
+
+To install Brave with a single command:
+
+```bash
+curl -fsS https://dl.brave.com/install.sh | sh
+```
+
+To install Brave using multiple commands:
 
 {{< tabpane code=true >}}
   {{< tab header="Ubuntu/Debian" language="bash">}}

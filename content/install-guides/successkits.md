@@ -16,7 +16,7 @@ additional_search_terms:
 ### Estimated completion time in minutes (please use integer multiple of 5)
 minutes_to_complete: 5
 
-author_primary: Ronan Synnott
+author: Ronan Synnott
 
 ### Link to official documentation
 official_docs: 
@@ -35,7 +35,7 @@ Arm Success Kits are a component of:
 * [Arm Flexible Access](https://www.arm.com/en/products/flexible-access)
 * [Arm Academic Access](https://www.arm.com/resources/research/enablement/academic-access)
 
-## Downloading Success Kit components
+## How do I download Success Kit components?
 
 All downloads are provided via the [Arm Product Download Hub](https://developer.arm.com/downloads).
 
@@ -45,7 +45,7 @@ You can download individual components, or the complete Success Kits.
 
 Bundles are provided for Windows, Linux, or Mac OS. Not all components are supported on all hosts.
 
-## Component installation and setup
+## How do I install Success Kit components?
 
 [User license setup](/install-guides/license/)
 

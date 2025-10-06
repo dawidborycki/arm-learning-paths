@@ -2,4 +2,7 @@ junit-xml
 pyyaml
 inclusivewriting
 pyspellchecker
+better-profanity
 setuptools
+alive-progress
+openai

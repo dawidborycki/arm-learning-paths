@@ -10,10 +10,10 @@ learning_objectives:
     - Create a project and deploy AWS Lambda function.    
 
 prerequisites:
-    - A Windows on Arm computer such as [Windows Dev Kit 2023](https://learn.microsoft.com/en-us/windows/arm/dev-kit), a Lenovo Thinkpad X13s running Windows 11 or a Windows on Arm [virtual machine](/learning-paths/cross-platform/woa_azure/).   
+    - A Windows on Arm computer such as the Lenovo Thinkpad X13s running Windows 11 or a Windows on Arm [virtual machine](/learning-paths/cross-platform/woa_azure/).   
     - Any code editor. [Visual Studio Code for Arm64](https://code.visualstudio.com/docs/?dv=win32arm64user) is suitable.    
 
-author_primary: Dawid Borycki
+author: Dawid Borycki
 
 ### Tags
 skilllevels: Introductory
@@ -29,6 +29,22 @@ tools_software_languages:
 
 operatingsystems:
     - Windows
+
+
+further_reading:
+    - resource:
+        title: Serverless Framework
+        link: https://www.serverless.com
+        type: website
+    - resource:
+        title: Serverless Framework documentation
+        link: https://www.serverless.com/framework/docs
+        type: Documentation
+    - resource:
+        title: AWS Lambda
+        link: https://aws.amazon.com/lambda/
+        type: Documentation
+
 
 
 ### FIXED, DO NOT MODIFY

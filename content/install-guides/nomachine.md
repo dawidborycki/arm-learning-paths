@@ -6,7 +6,7 @@ additional_search_terms:
 
 layout: installtoolsall
 minutes_to_complete: 30
-author_primary: Jason Andrews
+author: Jason Andrews
 multi_install: false
 multitool_install_part: false
 official_docs: https://www.nomachine.com/all-documents
@@ -66,8 +66,8 @@ Use a text editor to copy and paste this script into a file on the remote machin
 #!/bin/bash
 
 # install NoMachine for remote desktop
-wget https://download.nomachine.com/download/8.4/Arm/nomachine_8.4.2_1_arm64.deb
-sudo dpkg -i nomachine_8.4.2_1_arm64.deb
+wget https://download.nomachine.com/download/9.0/Arm/nomachine_9.0.188_11_arm64.deb
+sudo dpkg -i nomachine_9.0.188_11_arm64.deb
 if [ $? != 0 ]; then
   exit 1
 fi

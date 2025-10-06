@@ -1,28 +1,32 @@
 ---
-title: Create and train a PyTorch model for digit classification
+title: Create and train a PyTorch model for digit classification using the MNIST dataset
 
-minutes_to_complete: 80
+minutes_to_complete: 160
 
-who_is_this_for: This is an introductory topic for software developers interested in learning how to use PyTorch to create and train a feedforward neural network for digit classification. 
+who_is_this_for: This is an advanced topic for software developers interested in learning how to use PyTorch to create and train a feedforward neural network for digit classification, and also software developers interested in learning how to use and apply optimizations to the trained model in an Android application.
 
 learning_objectives:
     - Prepare a PyTorch development environment.
     - Download and prepare the MNIST dataset.
-    - Create a neural network architecture using PyTorch.
-    - Train a neural network using PyTorch.
+    - Create and train a neural network architecture using PyTorch.
+    - Create an Android app and load the pre-trained model.
+    - Prepare an input dataset.
+    - Measure the inference time.
+    - Optimize a neural network architecture using quantization and fusing.
+    - Deploy an optimized model in an Android application.
 
 prerequisites:
-    - A computer that can run Python3 and Visual Studio Code. The OS can be Windows, Linux, or macOS.
+    - A machine that can run Python3, Visual Studio Code, and Android Studio. 
+    - For the OS, you can use Windows, Linux, or macOS.
   
 
-author_primary: Dawid Borycki
+author: Dawid Borycki
 
 ### Tags
-skilllevels: Introductory
+skilllevels: Advanced
 subjects: ML
 armips:
     - Cortex-A
-    - Cortex-X
     - Neoverse
 operatingsystems:
     - Windows
@@ -30,12 +34,28 @@ operatingsystems:
     - macOS
 tools_software_languages:
     - Android Studio
-    - Coding
+    - Visual Studio Code
 shared_path: true
 shared_between:
     - servers-and-cloud-computing
     - laptops-and-desktops
-    - smartphones-and-mobile
+    - mobile-graphics-and-gaming
+
+further_reading:
+    - resource:
+        title: PyTorch
+        link: https://pytorch.org
+        type: documentation    
+    - resource:
+        title: MNIST
+        link: https://en.wikipedia.org/wiki/MNIST_database
+        type: website
+    - resource:
+        title: Visual Studio Code
+        link: https://code.visualstudio.com
+        type: website
+
+
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

@@ -10,9 +10,9 @@ learning_objectives:
     - Compare the performance of a simple application using different build configurations
 
 prerequisites:
-    - A Windows on Arm computer such as [Windows Dev Kit 2023](https://learn.microsoft.com/en-us/windows/arm/dev-kit) or Lenovo Thinkpad X13s running Windows 11.
+    - A Windows on Arm computer such as the Lenovo Thinkpad X13s running Windows 11.
 
-author_primary: Pareena Verma
+author: Pareena Verma
 
 ### Tags
 skilllevels: Introductory
@@ -22,9 +22,15 @@ armips:
 operatingsystems:
     - Windows
 tools_software_languages:
-    - Coding
     - Arm64EC
     - Visual Studio
+
+further_reading:
+    - resource:
+        title: Get started with Arm64EC
+        link: https://learn.microsoft.com/en-us/windows/arm/arm64ec-build
+        type: documentation
+
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

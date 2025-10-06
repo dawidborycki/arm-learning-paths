@@ -26,6 +26,8 @@ Where it is used:
 <link rel="canonical" href="https://learn.arm.com{{ .Permalink }}" />
 <title>{{ $title }}</title>
 
+{{ partial "head/jsonld.html" . }}
+
 <!-- Include the Arm standard Lato font for machines that don't have by default (Mac) -->
 <!-- Can be done automatically now in cross-page.css locally to speed up process -->
 <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -38,8 +40,8 @@ Where it is used:
 <script type="module" src="https://cdn.designsystem.arm.com/rel/4.9.0/arm-design-system/arm-design-system.esm.js" integrity="sha384-K+IGYCWaqyh5adrYnimAXzUamdfAwRYJGwwrybHfAhmsehOIcexAPoEoEyLRJwkC" crossorigin="anonymous"></script>
 
     <!-- Arm Header & Footer loading -->
-<script  type="text/javascript"  src="https://www.arm.com/arm-global-web-components/devhub/app.js" ></script>      
-
+<script  type="text/javascript"  src="https://www.arm.com/arm-global-web-components/devhub/app.js" ></script> 
+<!-- <script type="text/javascript" src="https://www.arm.com/arm-global-web-components/devhub/app-devhub.js"></script> -->
 
     
     <!-- Custom CSS minified -->

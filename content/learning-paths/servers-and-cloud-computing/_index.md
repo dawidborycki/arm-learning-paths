@@ -7,11 +7,10 @@ key_ip:
 - Neoverse
 maintopic: true
 operatingsystems_filter:
-- Android: 2
-- Baremetal: 1
-- Linux: 109
-- macOS: 9
-- Windows: 12
+- Android: 3
+- Linux: 180
+- macOS: 13
+- Windows: 14
 pinned_modules:
 - module:
     name: Recommended getting started learning paths
@@ -19,125 +18,194 @@ pinned_modules:
     - providers
     - migration
 subjects_filter:
-- CI-CD: 4
-- Containers and Virtualization: 25
-- Databases: 15
-- Libraries: 6
-- ML: 14
-- Performance and Architecture: 38
-- Storage: 1
-- Web: 10
+- CI-CD: 7
+- Containers and Virtualization: 32
+- Databases: 18
+- Libraries: 9
+- ML: 32
+- Performance and Architecture: 72
+- Storage: 2
+- Web: 12
 subtitle: Optimize cloud native apps on Arm for performance and cost
 title: Servers and Cloud Computing
 tools_software_languages_filter:
-- .NET: 1
+- .NET: 3
 - .NET SDK: 1
 - 5G: 1
 - ACL: 1
-- Android Studio: 2
+- AI: 1
+- Android Studio: 1
 - Ansible: 2
-- Arm Development Studio: 4
+- Apache Spark: 2
+- Apache Tomcat: 2
+- ApacheBench: 1
+- Arm Compiler for Linux: 1
+- Arm Development Studio: 3
+- Arm ISA: 1
+- Arm Performance Libraries: 1
+- Arm Streamline: 1
 - armclang: 1
 - armie: 1
 - ArmRAL: 1
 - ASP.NET Core: 2
-- Assembly: 4
-- assembly: 1
+- Assembly: 5
+- async-profiler: 1
+- AWS: 2
+- AWS CDK: 2
+- AWS Cloud Formation: 1
 - AWS CodeBuild: 1
-- AWS EC2: 1
+- AWS EC2: 2
 - AWS Elastic Container Service (ECS): 1
-- AWS Elastic Kubernetes Service (EKS): 2
+- AWS Elastic Kubernetes Service (EKS): 3
+- AWS Graviton: 1
+- AWS Lambda: 1
+- Azure CLI: 2
+- Azure Portal: 1
+- Bash: 1
+- bash: 2
 - Bastion: 3
-- BOLT: 1
+- BOLT: 2
 - bpftool: 1
-- C: 4
-- C#: 1
-- C++: 3
-- C/C++: 2
+- C: 10
+- C#: 2
+- C++: 12
 - Capstone: 1
-- CCA: 3
+- CCA: 8
 - Clair: 1
-- Clang: 10
+- Clang: 13
 - ClickBench: 1
 - ClickHouse: 1
-- CloudFormation: 1
 - CMake: 1
-- Coding: 20
+- conda: 1
+- Daytona: 1
+- Demo: 3
 - Django: 1
-- Docker: 15
-- Envoy: 2
+- Docker: 23
+- Envoy: 3
+- ExecuTorch: 1
+- FAISS: 1
+- FlameGraph: 1
 - Flink: 1
 - Fortran: 1
-- FVP: 3
-- GCC: 18
+- FunASR: 1
+- FVP: 7
+- GCC: 25
 - gdb: 1
 - Geekbench: 1
-- GenAI: 5
-- GitHub: 3
+- Generative AI: 12
+- GitHub: 6
+- GitHub Actions: 1
+- GitHub CLI: 1
 - GitLab: 1
-- Glibc: 1
-- Go: 2
-- Google Axion: 1
-- GoogleTest: 1
+- glibc: 1
+- Go: 4
+- Golang: 1
+- Google Axion: 3
+- Google Benchmark: 1
+- Google Cloud: 2
+- Google Test: 1
 - HammerDB: 1
+- Helm: 1
+- Herd7: 1
+- Hugging Face: 11
 - InnoDB: 1
 - Intrinsics: 1
-- JAVA: 1
-- Java: 1
+- iPerf3: 1
+- ipmitool: 1
+- Java: 4
 - JAX: 1
-- Kafka: 1
+- JMH: 1
+- Kafka: 2
+- kafka-consumer-perf-test.sh: 1
+- kafka-producer-perf-test.sh: 1
+- KEDA: 1
+- Kedify: 1
 - Keras: 1
-- Kubernetes: 10
-- Lambda: 1
+- KleidiAI: 1
+- Kubernetes: 11
+- Libamath: 1
 - libbpf: 1
 - Linaro Forge: 1
-- LLM: 3
+- Litmus7: 1
+- llama.cpp: 1
+- Llama.cpp: 2
+- LLM: 10
 - llvm-mca: 1
 - LSE: 1
 - MariaDB: 1
 - Memcached: 2
-- MongoDB: 2
+- MLPerf: 1
+- ModelScope: 1
+- MongoDB: 4
+- mongostat: 1
+- mongotop: 1
 - mpi: 1
-- MySQL: 9
-- Neon: 3
-- NEON: 1
+- MySQL: 10
+- NEON: 7
+- Networking: 1
 - Nexmark: 1
-- Nginx: 3
+- NGINX: 4
 - Node.js: 3
+- Ollama: 1
+- ONNX Runtime: 2
+- OpenBLAS: 1
+- OpenBMC: 1
+- OpenJDK 21: 2
+- OpenShift: 1
+- Orchard Core: 1
 - PAPI: 1
-- perf: 3
+- perf: 6
+- Perf: 1
 - PostgreSQL: 4
-- Python: 12
-- PyTorch: 5
+- Profiling: 1
+- Python: 32
+- PyTorch: 9
+- QEMU: 1
 - RAG: 1
 - Redis: 3
 - Remote.It: 2
-- RME: 3
+- RME: 8
+- Runbook: 71
 - Rust: 2
+- Service Mesh: 1
+- Siege: 1
 - snappy: 1
-- Snort: 1
-- SQL: 7
+- Snort3: 1
+- SQL: 8
 - Streamline CLI: 1
+- Streamlit: 2
 - Supervisor: 1
-- SVE: 3
-- SVE2: 1
+- SVE: 5
+- SVE2: 2
 - Sysbench: 1
+- Tekton: 1
 - Telemetry: 1
 - TensorFlow: 2
 - Terraform: 11
 - ThirdAI: 1
+- topdown-tool: 1
 - Trusted Firmware: 1
+- Trustee: 1
+- TSan: 1
 - TypeScript: 1
 - Vectorscan: 1
-- Visual Studio Code: 3
+- Veraison: 2
+- Visual Studio Code: 5
+- vLLM: 2
+- vvenc: 1
+- Whisper: 1
+- WindowsPerf: 1
 - WordPress: 3
+- wrk2: 2
 - x265: 1
+- YCSB: 1
+- Yocto/BitBake: 1
 - zlib: 1
-- Zookeeper: 1
+- ZooKeeper: 1
 weight: 1
 cloud_service_providers_filter:
-- AWS: 13
-- Google Cloud: 8
-- Microsoft Azure: 8
+- AWS: 17
+- Google Cloud: 18
+- Microsoft Azure: 18
 - Oracle: 2
 ---

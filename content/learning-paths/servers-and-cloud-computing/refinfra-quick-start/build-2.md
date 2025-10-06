@@ -21,10 +21,11 @@ Perform a build inside the container:
 ```
 
  During the build you will see that TF-A, UEFI and SCP firmware are built using their own build systems. The build finishes with the following output:
+
 ```output
-output/bin/grub-mkimage: info: kernel_img=0x7f366cf65010, kernel_size=0x1a000.
-output/bin/grub-mkimage: info: the core size is 0xa2a98.
-output/bin/grub-mkimage: info: writing 0xa5000 bytes.
+output/bin/grub-mkimage: info: kernel_img=0xf0a19d2c2010, kernel_size=0x1a000.
+output/bin/grub-mkimage: info: the core size is 0xa3040.
+output/bin/grub-mkimage: info: writing 0xa6000 bytes.
 Execute build for build-grub.sh on rdn2[rdn2][busybox] done.
 -----------------------------------
 ***********************************
@@ -79,5 +80,5 @@ lrwxrwxrwx 1 ubuntu ubuntu      30 Jan 12 15:35 tf-bl31.bin -> ../components/rdn
 lrwxrwxrwx 1 ubuntu ubuntu      33 Jan 12 15:35 uefi.bin -> ../components/css-common/uefi.bin
 ```
 
-The `fip-uefi.bin` firmware image will contain the `TF-A BL2` boot loader image which is responsible for unpacking the rest of the firmware as well as the firmware that TF-A BL2 unpacks. This includes the `SCP BL2` (`scp_ramfw.bin`) image that is unpacked by the AP firmware and transferred over to the SCP TCMs using the SCP shared data store module. Along with the FIP image, the FVP also needs the `TF-A BL1` image and the `SCP BL1` (`scp_romfw.bin`) image files.
+The `fip-uefi.bin` [firmware image package](https://trustedfirmware-a.readthedocs.io/en/v2.5/getting_started/tools-build.html) will contain the `TF-A BL2` boot loader image which is responsible for unpacking the rest of the firmware as well as the firmware that TF-A BL2 unpacks. This includes the `SCP BL2` (`scp_ramfw.bin`) image that is unpacked by the AP firmware and transferred over to the SCP TCMs using the SCP shared data store module. Along with the FIP image, the FVP also needs the `TF-A BL1` image and the `SCP BL1` (`scp_romfw.bin`) image files.
 

@@ -10,11 +10,11 @@ learning_objectives:
     - Automate deployment of a static website to Amazon S3.    
 
 prerequisites:
-    - A Windows on Arm computer such as [Windows Dev Kit 2023](https://learn.microsoft.com/en-us/windows/arm/dev-kit), a Lenovo Thinkpad X13s running Windows 11, or a Windows on Arm [virtual machine](/learning-paths/cross-platform/woa_azure/).   
+    - A Windows on Arm computer such as the Lenovo Thinkpad X13s running Windows 11 or a Windows on Arm [virtual machine](/learning-paths/cross-platform/woa_azure/).   
     - Any code editor. [Visual Studio Code for Arm64](https://code.visualstudio.com/docs/?dv=win32arm64user) is suitable.
     - Completion of the Learning Path that shows you how to [Deploy AWS services using the Serverless Framework](/learning-paths/servers-and-cloud-computing/serverless-framework-aws-intro/).
 
-author_primary: Dawid Borycki
+author: Dawid Borycki
 
 ### Tags
 skilllevels: Introductory
@@ -32,6 +32,21 @@ operatingsystems:
     - Linux
     - Windows
     - macOS
+
+
+further_reading:
+    - resource:
+        title: Serverless Framework
+        link: https://www.serverless.com
+        type: website
+    - resource:
+        title: Serverless Framework documentation
+        link: https://www.serverless.com/framework/docs
+        type: Documentation
+    - resource:
+        title: AWS Lambda
+        link: https://aws.amazon.com/lambda/
+        type: Documentation
 
 
 ### FIXED, DO NOT MODIFY

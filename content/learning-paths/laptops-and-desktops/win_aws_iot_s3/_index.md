@@ -10,11 +10,11 @@ learning_objectives:
    - Create a static website that interacts with AWS Lambda.   
 
 prerequisites:
-    - A Windows on Arm computer such as [Windows Dev Kit 2023](https://learn.microsoft.com/en-us/windows/arm/dev-kit), a Lenovo Thinkpad X13s running Windows 11 or a Windows on Arm [virtual machine](/learning-paths/cross-platform/woa_azure/).   
+    - A Windows on Arm computer such as the Lenovo Thinkpad X13s running Windows 11 or a Windows on Arm [virtual machine](/learning-paths/cross-platform/woa_azure/).   
     - Any code editor. [Visual Studio Code for Arm64](https://code.visualstudio.com/docs/?dv=win32arm64user) is suitable.    
     - Completion of the [Use AWS Lambda for IoT applications](/learning-paths/laptops-and-desktops/win_aws_iot_lambda/) Learning Path.
 
-author_primary: Dawid Borycki
+author: Dawid Borycki
 
 ### Tags
 skilllevels: Advanced
@@ -26,6 +26,21 @@ operatingsystems:
 tools_software_languages:
     - Node.js    
     - Visual Studio Code
+
+further_reading:
+    - resource:
+        title: Amazon S3
+        link: https://aws.amazon.com/s3/
+        type: documentation
+    - resource:
+        title: Hosting a static website using Amazon S3
+        link: https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html
+        type: documentation
+    - resource:
+        title: Developing with Amazon S3
+        link: https://docs.aws.amazon.com/AmazonS3/latest/userguide/developing-s3.html
+        type: documentation
+
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

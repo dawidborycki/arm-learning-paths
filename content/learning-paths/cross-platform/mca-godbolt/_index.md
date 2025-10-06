@@ -14,7 +14,7 @@ prerequisites:
     - Familiarity with Arm assembly.
     - LLVM version 16 or newer, which includes support for Neoverse V2.
 
-author_primary: Rin Dobrescu
+author: Rin Dobrescu
 
 ### Tags
 skilllevels: Introductory
@@ -23,8 +23,10 @@ armips:
     - Neoverse
     - Cortex-A
 tools_software_languages:
-    - assembly
+    - Assembly
     - llvm-mca
+    - Runbook
+
 operatingsystems:
     - Linux
     - Windows
@@ -35,7 +37,15 @@ shared_path: true
 shared_between:
     - servers-and-cloud-computing
     - laptops-and-desktops
-    - smartphones-and-mobile
+    - mobile-graphics-and-gaming
+
+further_reading:
+    - resource:
+        title: Arm Neoverse V2 Software Optimization Guide
+        link: https://developer.arm.com/documentation/109898/0300/?lang=en
+        type: documentation
+
+
 
 ### FIXED, DO NOT MODIFY
 # ================================================================================

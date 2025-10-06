@@ -12,30 +12,29 @@ from datetime import datetime, timedelta
 dname = ["content/install-guides",
          "content/learning-paths/cross-platform",
          "content/learning-paths/laptops-and-desktops",
-         "content/learning-paths/embedded-systems",
-         "content/learning-paths/microcontrollers",
-         "content/learning-paths/smartphones-and-mobile",
-         "content/learning-paths/servers-and-cloud-computing"]
+         "content/learning-paths/embedded-and-microcontrollers",
+         "content/learning-paths/iot",
+         "content/learning-paths/mobile-graphics-and-gaming",
+         "content/learning-paths/servers-and-cloud-computing",
+         "content/learning-paths/automotive"]
 
 
-
-
-'''
+"""
 Returns the date (yyyy-mm-dd) which a file in the given directory was last updated.
 If Learning Path, changes in any file in the directory will count.
-'''
+"""
 def get_latest_updated(directory, is_lp, item):
     article_path = directory if is_lp else f"{directory}/{item}"
     date = subprocess.run(["git", "log", "-1" ,"--format=%cs", str(article_path)], stdout=subprocess.PIPE)
     return date
 
-'''
+"""
 Recursive content search in a given directory.
 Returns:
 - list of articles older than a given period found
 - count of articles found
 - list of primary authors found
-'''
+"""
 def content_parser(directory, period):
     count = 0
     art_list = {}
@@ -91,12 +90,12 @@ def content_parser(directory, period):
     return [art_list, count, auth_list]
 
 
-'''
+"""
 Initialize Plotly data structure for stats
 1 graph on the left with data for install tool guides
 1 graph on the right with data for learning paths
 Input: title for the graph
-'''
+"""
 def init_graph(title):
     data = {
             "data": [
@@ -125,21 +124,21 @@ def init_graph(title):
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/embedded-systems",
+                    "name": "learning-paths/embedded-and-microcontrollers",
                     "xaxis": "x2"
                 },
                 {
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/microcontrollers",
+                    "name": "learning-paths/iot",
                     "xaxis": "x2"
                 },
                 {
                     "x": [],
                     "y": [],
                     "type": "bar",
-                    "name": "learning-paths/smartphones-and-mobile",
+                    "name": "learning-paths/mobile-graphics-and-gaming",
                     "xaxis": "x2"
                 },
                 {
@@ -147,6 +146,13 @@ def init_graph(title):
                     "y": [],
                     "type": "bar",
                     "name": "learning-paths/servers-and-cloud-computing",
+                    "xaxis": "x2"
+                },
+                                {
+                    "x": [],
+                    "y": [],
+                    "type": "bar",
+                    "name": "learning-paths/automotive",
                     "xaxis": "x2"
                 }
             ],
@@ -182,9 +188,9 @@ def init_graph(title):
     return data
 
 
-'''
+"""
 Generate JSON data for stats page
-'''
+"""
 def stats():
     global dname
 
@@ -258,10 +264,10 @@ def stats():
     f_contrib.close()
 
 
-'''
+"""
 List pages older than a period in days and save result as CSV
 Generate JSON file with data
-'''
+"""
 def report(period):
     global dname
 

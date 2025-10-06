@@ -6,16 +6,13 @@ additional_search_terms:
 
 layout: installtoolsall
 minutes_to_complete: 10
-author_primary: Jason Andrews
+author: Jason Andrews
 multi_install: false
 multitool_install_part: false
 official_docs: https://aws.github.io/copilot-cli/
 test_images:
 - ubuntu:latest
-test_link: null
-test_maintenance: false
-test_status:
-- passed
+test_maintenance: true
 title: AWS Copilot CLI
 tool_install: true
 weight: 1
@@ -23,9 +20,9 @@ weight: 1
 
 AWS Copilot CLI is an open source command line interface for running containers on AWS App Runner, Amazon Elastic Container Service (ECS), and AWS Fargate.
 
-It is available for a variety of operating systems and Linux distributions and supports the Arm architecture. 
+It is available for a variety of operating systems and Linux distributions and supports the Arm architecture.
 
-## Before you begin
+## What do I need before installing AWS Copilot CLI?
 
 This article provides quick solutions to install the latest version of AWS Copilot CLI for Ubuntu on Arm and macOS.
 
@@ -47,9 +44,9 @@ If you are on macOS with Apple Silicon the output should be:
 arm64
 ```
 
-## Download and install AWS Copilot CLI
+## How do I download and install AWS Copilot CLI?
 
-Copilot requires Docker. Refer to the [Docker](/install-guides/docker/) install guide for installation instructions. 
+Copilot requires Docker. Refer to the [Docker](/install-guides/docker/) install guide for installation instructions.
 
 If you are using Docker on Linux you will need to install QEMU to build container images for both the `arm64` and the `amd64` architectures.
 
@@ -118,6 +115,8 @@ Examples
   Displays the help menu for the "init" command.
   `$ copilot init --help`
 ```
+
+## How do I verify AWS Copilot CLI installation?
 
 Verify Copilot CLI is installed by running:
 

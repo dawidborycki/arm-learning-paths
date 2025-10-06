@@ -10,20 +10,20 @@ Desktops and laptops, based on the Arm architecture, are available with differen
 
 ### Windows
 
-[Windows Dev Kit 2023](https://www.microsoft.com/en-us/d/windows-dev-kit-2023/94k0p67w7581) is for software developers creating Windows applications for Arm.
-
-Windows on Arm laptops can also be used for software development. 
-
-- [Lenovo ThinkPad X13s](https://www.lenovo.com/us/en/p/laptops/thinkpad/thinkpadx/thinkpad-x13s-(13-inch-snapdragon)/len101t0019)
-- [Surface Pro 9 with 5G](https://www.microsoft.com/en-us/d/surface-pro-9/93vkd8np4fvk)
-- [Dell Inspiron 14](https://www.dell.com/en-us/shop/dell-laptops/inspiron-14-laptop/spd/inspiron-14-3420-laptop)
+[Windows on Arm](https://learn.microsoft.com/en-us/windows/arm/overview) laptops are available for software development from a variety of vendors. 
 
 
 ### ChromeOS
 
-Chromebooks with Arm processors can also be used for software development. The Lenovo [Duet 3](https://www.lenovo.com/us/en/p/laptops/lenovo/lenovo-edu-chromebooks/ideapad-duet-3-chromebook-(11-inch,-qlc)/len101i0034) and [Duet 5](https://www.lenovo.com/us/en/p/laptops/lenovo/lenovo-edu-chromebooks/ideapad-duet-5-chromebook/len101i0023) are popular detachable Chromebooks. 
+Chromebooks with Arm processors can also be used for software development. 
+
+If you are looking high performance, the [Lenovo Chromebook Plus 14](https://www.bestbuy.com/site/lenovo-chromebook-plus-14-oled-2k-touchscreen-laptop-mediatek-kompanio-ultra-16gb-memory-256gb-ufs-seashell/6630493.p?skuId=6630493&intl=nosplash) is is powered by the MediaTek Kompanio Ultra processor, the fastest Arm chip in a Chromebook.
+
+The Lenovo [Duet Gen 9](https://www.lenovo.com/us/en/p/laptops/lenovo/lenovo-edu-chromebooks/lenovo-chromebook-duet-gen-9-11-inch-mediatek/83hh0000us) is a popular detachable Chromebook. 
 
 ### Linux
+
+The System76 [Thelio Astra](https://www.system76.com/arm/) is a powerful Arm-based desktop computer designed by System76 and ships with Ubuntu installed. 
 
 Both Windows and ChromeOS have a Linux subsystem which can be used for software development tasks. Read [WSL for Windows on Arm](/learning-paths/laptops-and-desktops/wsl2) to learn more.
 
