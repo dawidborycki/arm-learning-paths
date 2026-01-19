@@ -59,6 +59,18 @@ These grid images allow us to later test the end-to-end pipeline: detect the boa
 
 Together, these datasets provide both the micro-level data needed to train the digit recognizer and the macro-level data to simulate the camera pipeline for testing and deployment.
 
+## Dataset source (required download)
+This tutorial uses a public Sudoku dataset hosted on Hugging Face, which provides millions of Sudoku puzzles paired with their solutions.
+
+Dataset: Sudoku-Dataset by Ritvik19: https://huggingface.co/datasets/Ritvik19/Sudoku-Dataset
+
+Download the following file: train_1.parquet
+
+Direct link:
+https://huggingface.co/datasets/Ritvik19/Sudoku-Dataset/blob/main/train_1.parquet
+
+Place the downloaded file in the root of your project (next to 02_PrepareData.py), or update the PARQUET_PATH variable in the script accordingly:
+
 ## Implementation
 Start by creating a new file 02_PrepareData.py and modify it as follows:
 ```python

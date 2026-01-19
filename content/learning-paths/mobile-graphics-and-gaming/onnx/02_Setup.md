@@ -58,6 +58,18 @@ The above will install the following:
 * netron – tool for visualizing ONNX models.
 * numpy – used for tensor manipulation.
 
+### Python version compatibility note (important)
+ONNX Runtime provides prebuilt wheels only for specific Python versions. At the time of writing, Python 3.12 is not yet supported by ONNX Runtime on macOS or Arm platforms.
+
+If you see an error like:
+```console
+ERROR: No matching distribution found for onnxruntime
+```
+it usually means your Python version is too new. We tested Python 3.10 for this learning path.
+
+If you already have Python 3.12 installed, install an additional Python 3.10 or 3.11 interpreter and create a virtual environment explicitly with it.
+
+## PyTorch
 Now, install PyTorch (we’ll use it later to build and export a sample model):
 
 ```console
